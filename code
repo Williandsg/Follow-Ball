@@ -1,0 +1,22 @@
+let x, y; // Variáveis para armazenar a posição do círculo
+
+function setup() {
+  createCanvas(400, 400);
+  x = width / 2;
+  y = height / 2;
+}
+
+function draw() {
+  background(220);
+  
+  // Desenhe um círculo que segue o cursor do mouse
+  fill(255, 0, 0); // Cor de preenchimento vermelha
+  noStroke();      // Sem contorno
+  ellipse(x, y, 50, 50);
+}
+
+function mouseMoved() {
+  // Atualize a posição do círculo com a posição do mouse
+  x = mouseX;
+  y = mouseY;
+}
